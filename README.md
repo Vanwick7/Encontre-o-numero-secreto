@@ -42,4 +42,5 @@ O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 50
 
 ## Link para o jogo online
 
-Se você já configurou o GitHub Pages, o jogo pode ser acessado em:  
+Se você já configurou o GitHub Pages, o jogo pode ser acessado em:  <img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/c71e40bd-2cdd-42a1-83df-f922d68331a7" />
+
