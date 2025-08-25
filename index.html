@@ -6,33 +6,23 @@
   <title>Jogo do Número Secreto</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Pequeno estilo para esconder botão reiniciar */
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Ícone do troféu -->
     <img src="trophy.png" alt="Ícone de um troféu" class="icone-trofeu">
-
     <h1>Jogo do <span class="azul">Número Secreto</span></h1>
     <p>Escolha um número entre 1 e 5000</p>
+    <img src="robot.png" alt="Robô" class="icone-robo">
 
-    <!-- Robô -->
-    <img src="robot.png" alt="Robô mergulhador" class="icone-robo">
-
-    <!-- Input e botões -->
     <input type="number" id="inputChute" placeholder="Digite seu palpite">
     <button id="btnChutar">Chutar</button>
     <button id="btnReiniciar" class="hidden">Jogar Novamente</button>
 
-    <!-- Área de resultado -->
     <p id="mensagem"></p>
   </div>
 
-  <!-- Scripts -->
   <script src="app.js"></script>
   <script>
     // Permite chutar ao pressionar Enter

@@ -17,9 +17,8 @@ O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 50
 
 ## Pré-visualização
 
-Prévia do jogo disponível ao abrir o link do GitHub Pages.
-
----
+O jogo pode ser testado online no GitHub Pages:  
+[🎮 Jogar agora](https://Vanwick7.github.io/Encontre-o-numero-secreto/)
 
 ---
 
@@ -28,7 +27,7 @@ Prévia do jogo disponível ao abrir o link do GitHub Pages.
 - `index.html` → Estrutura do site  
 - `style.css` → Estilos visuais e animações  
 - `app.js` → Lógica do jogo  
-- Imagens (`trophy.png`, `robot.png`, `Ruido.png`)  
+- Imagens (`trophy.png`, `robot.png`)  
 - Sons (`acerto.mp3`, `erro.mp3`)  
 
 ---
@@ -41,6 +40,8 @@ Prévia do jogo disponível ao abrir o link do GitHub Pages.
 
 ---
 
-## Link para o jogo online
+## Observações
 
-<img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/c71e40bd-2cdd-42a1-83df-f922d68331a7" />
+- O botão **Jogar Novamente** reinicia o número secreto.  
+- O input responde tanto ao botão **Chutar** quanto à tecla **Enter**.  
+- Testado para funcionar em navegadores modernos (Chrome, Edge, Firefox).

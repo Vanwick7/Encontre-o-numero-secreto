@@ -1,4 +1,4 @@
-// Configuração inicial do jogo
+// Configuração inicial
 const numeroMaximo = 5000;
 let numeroSecreto;
 let tentativas = 0;
@@ -9,37 +9,37 @@ const btnChutar = document.getElementById("btnChutar");
 const btnReiniciar = document.getElementById("btnReiniciar");
 const mensagem = document.getElementById("mensagem");
 
-// Sons (adicione os arquivos .mp3 na mesma pasta ou ajuste o caminho)
+// Sons (opcional, remova se não tiver os arquivos)
 const somAcerto = new Audio("acerto.mp3");
 const somErro = new Audio("erro.mp3");
 
-// Função para gerar número secreto
+// Gera número secreto
 function gerarNumeroSecreto() {
     return Math.floor(Math.random() * numeroMaximo) + 1;
 }
 
-// Função para resetar o jogo
+// Reseta o jogo
 function resetarJogo() {
     numeroSecreto = gerarNumeroSecreto();
     tentativas = 0;
     mensagem.textContent = "";
-    mensagem.classList.remove("maior", "menor", "acertou", "flash");
+    mensagem.className = "";
     inputChute.value = "";
     inputChute.disabled = false;
     btnChutar.disabled = false;
     btnReiniciar.classList.add("hidden");
     inputChute.focus();
-    console.log("Número secreto:", numeroSecreto); // debug
+    console.log("Número secreto:", numeroSecreto); // para debug
 }
 
-// Função para animação visual
+// Animação visual
 function animarResultado(tipo) {
-    mensagem.classList.remove("maior", "menor", "acertou", "flash");
-    void mensagem.offsetWidth; // Reinicia animação
+    mensagem.className = "";
+    void mensagem.offsetWidth; // reinicia animação
     mensagem.classList.add(tipo);
 }
 
-// Função para processar o chute do usuário
+// Processa o chute
 function processarChute() {
     const chute = parseInt(inputChute.value);
     tentativas++;
@@ -77,5 +77,5 @@ function processarChute() {
 btnChutar.addEventListener("click", processarChute);
 btnReiniciar.addEventListener("click", resetarJogo);
 
-// Inicializa o jogo
+// Inicializa
 resetarJogo();
