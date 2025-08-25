@@ -107,3 +107,8 @@ h2 {
 .hidden {
     display: none;
 }
+.icone-trofeu {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 80px;
+}
