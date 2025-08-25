@@ -17,7 +17,8 @@ O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 50
 
 ## Pré-visualização
 
-![Prévia do jogo](ruido.png)  
+![Prévia do jogo](<img width="1918" height="941" alt="foto" src="https://github.com/user-attachments/assets/bfce9ef1-4a92-4ee2-bdef-b1b426eedb17" />
+)  
 *Substitua por um GIF mostrando o jogo em ação, se desejar.*
 
 ---
@@ -42,5 +43,5 @@ O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 50
 
 ## Link para o jogo online
 
-Se você já configurou o GitHub Pages, o jogo pode ser acessado em:  <img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/c71e40bd-2cdd-42a1-83df-f922d68331a7" />
+<img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/c71e40bd-2cdd-42a1-83df-f922d68331a7" />
 
