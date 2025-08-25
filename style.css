@@ -1,114 +1,36 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Flash rápido */
+.flash {
+  animation: flash 0.3s;
+}
+@keyframes flash {
+  0% { background-color: #fff; }
+  50% { background-color: #fdd; }
+  100% { background-color: #fff; }
 }
 
-body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Inter', sans-serif;
+/* Maior / menor */
+.maior {
+  animation: shake 0.3s;
+  color: #1e90ff;
+}
+.menor {
+  animation: shake 0.3s;
+  color: #ff4500;
+}
+.acertou {
+  animation: bounce 0.5s;
+  color: #32cd32;
 }
 
-body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+/* Shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }
 
-.container {
-    width: 1200px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
-    padding: 20px;
-}
-
-.container__conteudo {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.container__informacoes {
-    flex: 1;
-    padding: 20px;
-}
-
-.container__input {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: none;
-    margin-top: 16px;
-    outline: none;
-}
-
-.container__botao {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
-    margin-top: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.container__botao:hover {
-    background: #145bb0;
-}
-
-.container__texto {
-    margin: 16px 0;
-}
-
-.container__texto-azul {
-    color: #1875E8;
-}
-
-h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: 400;
-    margin-top: 8px;
-}
-
-#mensagem {
-    margin-top: 16px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.hidden {
-    display: none;
-}
-.icone-trofeu {
-  display: block;
-  margin: 0 auto 20px auto;
-  width: 80px;
+/* Bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }

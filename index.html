@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo do Número Secreto</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Pequeno estilo para esconder botão reiniciar */
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -17,15 +23,26 @@
     <!-- Robô -->
     <img src="robot.png" alt="Robô mergulhador" class="icone-robo">
 
-    <!-- Input e botão -->
-    <input type="number" id="valor" placeholder="Digite seu palpite">
-    <button onclick="verificarChute()">Chutar</button>
+    <!-- Input e botões -->
+    <input type="number" id="inputChute" placeholder="Digite seu palpite">
+    <button id="btnChutar">Chutar</button>
+    <button id="btnReiniciar" class="hidden">Jogar Novamente</button>
 
     <!-- Área de resultado -->
-    <p id="resultado"></p>
+    <p id="mensagem"></p>
   </div>
 
   <!-- Scripts -->
   <script src="app.js"></script>
+  <script>
+    // Permite chutar ao pressionar Enter
+    const inputChute = document.getElementById("inputChute");
+    inputChute.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btnChutar").click();
+      }
+    });
+  </script>
 </body>
 </html>

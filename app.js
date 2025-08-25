@@ -1,52 +1,81 @@
-let numeroMaximo = 5000;
+// Configuração inicial do jogo
+const numeroMaximo = 5000;
 let numeroSecreto;
-let tentativas;
+let tentativas = 0;
 
+// Elementos do DOM
 const inputChute = document.getElementById("inputChute");
 const btnChutar = document.getElementById("btnChutar");
 const btnReiniciar = document.getElementById("btnReiniciar");
 const mensagem = document.getElementById("mensagem");
 
-// Função para iniciar ou reiniciar o jogo
-function iniciarJogo() {
-    numeroSecreto = Math.floor(Math.random() * numeroMaximo) + 1;
+// Sons (adicione os arquivos .mp3 na mesma pasta ou ajuste o caminho)
+const somAcerto = new Audio("acerto.mp3");
+const somErro = new Audio("erro.mp3");
+
+// Função para gerar número secreto
+function gerarNumeroSecreto() {
+    return Math.floor(Math.random() * numeroMaximo) + 1;
+}
+
+// Função para resetar o jogo
+function resetarJogo() {
+    numeroSecreto = gerarNumeroSecreto();
     tentativas = 0;
     mensagem.textContent = "";
+    mensagem.classList.remove("maior", "menor", "acertou", "flash");
     inputChute.value = "";
     inputChute.disabled = false;
     btnChutar.disabled = false;
     btnReiniciar.classList.add("hidden");
-    console.log("Número secreto:", numeroSecreto); // para debug
+    inputChute.focus();
+    console.log("Número secreto:", numeroSecreto); // debug
 }
 
-// Verifica o chute
-btnChutar.addEventListener("click", () => {
-    let chute = parseInt(inputChute.value);
+// Função para animação visual
+function animarResultado(tipo) {
+    mensagem.classList.remove("maior", "menor", "acertou", "flash");
+    void mensagem.offsetWidth; // Reinicia animação
+    mensagem.classList.add(tipo);
+}
+
+// Função para processar o chute do usuário
+function processarChute() {
+    const chute = parseInt(inputChute.value);
     tentativas++;
 
     if (isNaN(chute) || chute < 1 || chute > numeroMaximo) {
         mensagem.textContent = `⚠️ Digite um número válido entre 1 e ${numeroMaximo}`;
+        animarResultado("flash");
+        somErro.play();
         return;
     }
 
     if (chute === numeroSecreto) {
-        let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
-        mensagem.textContent = `🎉 Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`;
+        const palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+        mensagem.textContent = `🎉 Parabéns! Você descobriu o número secreto ${numeroSecreto} em ${tentativas} ${palavraTentativa}.`;
+        animarResultado("acertou");
+        somAcerto.play();
         btnChutar.disabled = true;
         inputChute.disabled = true;
         btnReiniciar.classList.remove("hidden");
     } else if (chute > numeroSecreto) {
         mensagem.textContent = `🔽 O número secreto é menor que ${chute}`;
+        animarResultado("menor");
+        somErro.play();
     } else {
         mensagem.textContent = `🔼 O número secreto é maior que ${chute}`;
+        animarResultado("maior");
+        somErro.play();
     }
 
     inputChute.value = "";
     inputChute.focus();
-});
+}
 
-// Reinicia ao clicar em "Jogar novamente"
-btnReiniciar.addEventListener("click", iniciarJogo);
+// Event listeners
+btnChutar.addEventListener("click", processarChute);
+btnReiniciar.addEventListener("click", resetarJogo);
 
-// Inicia na primeira vez
-iniciarJogo();
+// Inicializa o jogo
+resetarJogo();
