@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo do Número Secreto</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+
+  <!-- Estilo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="container__conteudo">
+      <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
+      
+      <div class="container__informacoes">
+        <img src="./img/trophy.png" alt="ícone de um troféu" />
+        
+        <div class="container__texto">
+          <h1>Jogo do <span class="container__texto-azul">Número Secreto</span></h1>
+          <h2>Escolha um número entre 1 e 5000</h2>
+        </div>
+
+        <!-- Input e botão -->
+        <input type="number" id="inputChute" class="container__input" placeholder="Digite seu palpite">
+        <button id="btnChutar" class="container__botao">Chutar</button>
+
+        <!-- Botão reiniciar (inicialmente escondido) -->
+        <button id="btnReiniciar" class="container__botao hidden">Jogar novamente</button>
+
+        <!-- Mensagem -->
+        <p id="mensagem"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
