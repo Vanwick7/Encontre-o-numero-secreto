@@ -1,23 +1,45 @@
 # Jogo do Número Secreto
 
-Este é um jogo simples de adivinhação em JavaScript.
+Um jogo simples de adivinhação em JavaScript.  
+O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 5000.
+
+---
 
 ## Como jogar
 
-1. Abra o site.
-2. Digite um número entre 1 e 5000.
-3. Clique em "Chutar" ou pressione Enter.
-4. Tente descobrir o número secreto!
+1. Abra o site (via GitHub Pages ou localmente).  
+2. Digite um número entre 1 e 5000.  
+3. Clique no botão **Chutar** ou pressione **Enter**.  
+4. O jogo mostrará se o número secreto é maior ou menor.  
+5. Continue tentando até acertar o número! 🎯
+
+---
+
+## Pré-visualização
+
+![Prévia do jogo](ruido.png)  
+*Substitua por um GIF mostrando o jogo em ação, se desejar.*
+
+---
 
 ## Arquivos do projeto
 
-- `index.html` → estrutura do site
-- `style.css` → estilos visuais
-- `app.js` → lógica do jogo
-- Imagens e sons usados no jogo
+- `index.html` → Estrutura do site  
+- `style.css` → Estilos visuais e animações  
+- `app.js` → Lógica do jogo  
+- Imagens (`trophy.png`, `robot.png`, `Ruido.png`)  
+- Sons (`acerto.mp3`, `erro.mp3`)  
 
-## Tecnologias
+---
 
-- HTML
-- CSS
-- JavaScript
+## Tecnologias usadas
+
+- HTML  
+- CSS  
+- JavaScript  
+
+---
+
+## Link para o jogo online
+
+Se você já configurou o GitHub Pages, o jogo pode ser acessado em:  
