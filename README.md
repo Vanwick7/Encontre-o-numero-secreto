@@ -16,10 +16,7 @@ O objetivo é descobrir o **número secreto** gerado aleatoriamente entre 1 e 50
 ---
 
 ## Pré-visualização
-
-![Prévia do jogo](<img width="1918" height="941" alt="foto" src="https://github.com/user-attachments/assets/bfce9ef1-4a92-4ee2-bdef-b1b426eedb17" />
-)  
-*Substitua por um GIF mostrando o jogo em ação, se desejar.*
+![Prévia do jogo](assets/game-preview.gif)
 
 ---
 
